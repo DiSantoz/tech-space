@@ -30,11 +30,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 // turn on routes
 app.use(routes);
 
+//require handlebar helpers
+const helpers = require('./utils/helpers');
+
 //setup Handlebars
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+
+
+
 
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
