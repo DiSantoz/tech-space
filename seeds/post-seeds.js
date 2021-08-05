@@ -2,64 +2,54 @@ const { Post } = require('../models');
 
 const postdata = [
   {
-    title: 'Donec posuere metus vitae ipsum.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'Capsule Corp launches new Radar',
+    post_content: 'New radar now comes in different color options and better proximity senor!',
     user_id: 1
   },
   {
-    title: 'Morbi non quam nec dui luctus rutrum.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'Leaf village to get Ramen Robo',
+    post_content: 'New AI advances have paved the way for a ramen making robot',
     user_id: 2
   },
   {
-    title: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'Traveling to the moon unsafe?',
+    post_content: 'Recent studies have found that ninjas should not travel to the moon',
     user_id: 3
   },
   {
-    title: 'Nunc purus.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'New Saiyan Pod in development!!',
+    post_content: 'The new pod in development with Capsule Corp and Anbu Intel Division paves the way for space travel',
     user_id: 4
   },
   {
-    title: 'Pellentesque eget nunc.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'New M1 and Tensor Chip battle! ',
+    post_content: 'Both apple and google now have their own CPU creating an inner battle for efficiency and cost',
     user_id: 5
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'Ciri or Siri',
+    post_content: `Should Siri have an option to use Ciri's voice from The Witcher!`,
     user_id: 6
   },
   {
-    title: 'In hac habitasse platea dictumst.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'Planet Namek: New Hope ',
+    post_content: 'NASA has recently discovered an uninhabited planet, with hopes to give the Namekians a new home ',
     user_id: 7
   },
   {
-    title: 'Morbi non quam nec dui luctus rutrum.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'Spirit energy source?',
+    post_content: 'New studies are being conducted with hopes to harvest spirit energy to combat fossil fuel waste',
     user_id: 8
   },
   {
-    title: 'Duis ac nibh.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'Immortality, a new possibility?',
+    post_content: 'Orochimaru has been secretly conducting studies on immortality technology, to perserve humanity',
     user_id: 9
   },
   {
-    title: 'Curabitur at ipsum ac tellus semper interdum.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
+    title: 'Saiyan vs Uzumaki',
+    post_content: 'Who would win? Sorry, I know this is not tech related, but honestly, who?',
     user_id: 10
-  },
-  {
-    title: 'In hac habitasse platea dictumst.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
-    user_id: 1
-  },
-  {
-    title: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
-    post_content: 'DBZ or Naruto, cant go wrong with both',
-    user_id: 2
   }
 ];
 

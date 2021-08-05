@@ -2,12 +2,22 @@
     box-sizing: border-box;
   }
   
+  /* Root color scheme */
+:root {
+  --primary-color: #F85B1A; 
+  --secondary-color: #072083;
+  --tertiary-color: #F2A30B;
+  --quaternary-color:  #FBE407;
+
+}
+
+
   body, html {
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color:var(--tertiary-color);
   }
   
   a {
