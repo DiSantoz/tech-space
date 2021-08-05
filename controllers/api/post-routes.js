@@ -7,6 +7,8 @@ const { Post, User } = require('../../models');
 router.get('/', (req, res) => {
     Post.findAll({
       attributes: ['id', 'post_content', 'title', 'created_at'],
+      //latest post will show first
+      order: [['created_at', 'DESC']], 
       include: [
         {
           model: User,
@@ -34,6 +36,67 @@ router.get('/:id', (req, res) => {
           attributes: ['username']
         }
       ]
+    })
+      .then(dbPostData => {
+        if (!dbPostData) {
+          res.status(404).json({ message: 'No post found with this id' });
+          return;
+        }
+        res.json(dbPostData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+// create new post
+router.post('/', (req, res) => {
+   
+    Post.create({
+      title: req.body.title,
+      post_content: req.body.post_content,
+      user_id: req.body.user_id
+    })
+      .then(dbPostData => res.json(dbPostData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+// update post title and/or content
+router.put('/:id', (req, res) => {
+    Post.update(
+      {
+        title: req.body.title,
+        post_content: req.body.post_content
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      }
+    )
+      .then(dbPostData => {
+        if (!dbPostData) {
+          res.status(404).json({ message: 'No post found with this id' });
+          return;
+        }
+        res.json(dbPostData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+// delete a post
+router.delete('/:id', (req, res) => {
+    Post.destroy({
+      where: {
+        id: req.params.id
+      }
     })
       .then(dbPostData => {
         if (!dbPostData) {
