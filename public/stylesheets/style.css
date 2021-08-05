@@ -8,19 +8,77 @@
   --secondary-color: #072083;
   --tertiary-color: #F2A30B;
   --quaternary-color:  #FBE407;
-
 }
 
-
+ /* Styling for entire body */
   body, html {
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
     color:var(--tertiary-color);
+    /* background-color: var(--secondary-color); */
+  }
+
+/* styling for cards in homepage */
+ .post-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .meta{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+    padding-bottom: 10px;
+  }
+
+  .title{
+    background-color: var(--quaternary-color);
+    font-size: 20px;
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+
+  .title:hover{
+    text-decoration: none;
+  }
+
+  .login{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 25px;
+  }
+
+  .login:hover{
+    text-decoration: none;
+  }
+
+  .card-text{
+    font-size: 20px;
+  }
+
+  .post {
+    margin-bottom: 2%;
+    line-height: 150%;
   }
   
-  a {
+  .post .title span {
+    font-style: italic;
+    font-size: 90%;
+    color:var(--primary-color);
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .tech a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 40px;
+  }
+
+  /* a {
     text-decoration: none;
     color: #225ca3;
     font-weight: bold;
@@ -29,7 +87,7 @@
   
   a:hover {
     color: #3486eb;
-  }
+  } */
   
   button {
     background-color: #225ca3;
@@ -46,10 +104,7 @@
     background-color: #3486eb;
   }
   
-  .post-list {
-    margin: 0;
-    padding: 0;
-  }
+ 
   
   textarea, input {
     padding: .5%;
@@ -127,16 +182,7 @@
     background-color: #ff643d;
   }
   
-  .post {
-    margin-bottom: 2%;
-    line-height: 150%;
-  }
-  
-  .post .title span {
-    font-style: italic;
-    font-size: 90%;
-    color: #7d7d7d;
-  }
+
   
   .edit-link {
     display: block;

@@ -1,21 +1,25 @@
 {{!-- Display all Posts by Users --}}
+
 <ol class="post-list">
     {{#each posts}}
-  <li>
-    <article class="post">
-      <div class="title">
-        <a href="/post/{{id}}">{{title}}</a>
-        <span>Posted by {{user.username}} on
-        {{format_date created_at}}</span>
-      </div>
-      <div>
-          <span>{{post_content}}</span>
-      </div>
-      <div class="meta">
-         
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-      </div>
-    </article>
-  </li>
-  {{/each}}
+    <li>
+        <article class="post">
+            <div class="card">
+                <div class="card-header title">
+                    <a href="/post/{{id}}">{{title}}</a>
+                    <span>Posted by {{user.username}} on
+                        {{format_date created_at}}</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-text">{{post_content}}</span>
+                </div>
+                <div class="meta">
+
+                    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                </div>
+            </div>
+
+        </article>
+    </li>
+    {{/each}}
 </ol>
