@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment, Vote } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 
 //USER ROUTE IS /api/users
 
@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ['id', 'title', 'post_url', 'created_at']
+        attributes: ['id', 'title', 'post_content', 'created_at']
       },
       {
         model: Comment,
@@ -35,12 +35,6 @@ router.get('/:id', (req, res) => {
           attributes: ['title']
         }
       },
-      {
-        model: Post,
-        attributes: ['title'],
-        through: Vote,
-        as: 'voted_posts'
-      }
     ]
   })
     .then(dbUserData => {
