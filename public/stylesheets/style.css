@@ -4,10 +4,10 @@
   
   /* Root color scheme */
 :root {
-  --primary-color: #F85B1A; 
-  --secondary-color: #072083;
-  --tertiary-color: #F2A30B;
-  --quaternary-color:  #FBE407;
+  --primary-color: #082032; 
+  --secondary-color: #2C394B;
+  --tertiary-color: #334756;
+  --quaternary-color: #FF4C29;
 }
 
  /* Styling for entire body */
@@ -16,8 +16,8 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color:var(--tertiary-color);
-    /* background-color: var(--secondary-color); */
+    color:var(--secondary-color);
+    background-color: var(--secondary-color);
   }
 
 /* styling for cards in homepage */
@@ -35,9 +35,9 @@
   }
 
   .title{
-    background-color: var(--quaternary-color);
+    background-color: var(--primary-color);
     font-size: 20px;
-    color: var(--secondary-color);
+    
     text-decoration: none;
   }
 
@@ -45,9 +45,13 @@
     text-decoration: none;
   }
 
+  .title a{
+    color: var(--quaternary-color);
+  }
+
   .login{
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--quaternary-color);
     font-size: 25px;
   }
 
@@ -67,28 +71,90 @@
   .post .title span {
     font-style: italic;
     font-size: 90%;
-    color:var(--primary-color);
+    color:var(--quaternary-color);
     display: flex;
     justify-content: flex-end;
   }
   
   .tech a{
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--quaternary-color);
     font-size: 40px;
   }
 
-  /* a {
+  .meta a{
+    color: var(--tertiary-color);
+    font-size: 15px;
+  }
+
+  .meta a:hover{
     text-decoration: none;
-    color: #225ca3;
-    font-weight: bold;
-    transition: color .1s;
+  }
+
+  /* Styling for Login Page */
+
+  .password-login{
+    color: var(--quaternary-color);
+  }
+
+  .username-login{
+    color: var(--quaternary-color);
+  }
+
+  .sign-up{
+    color: var(--quaternary-color);
+  }
+
+  .sign-up:hover{
+    text-decoration: none;
+    color: #d41414;
+  }
+
+  /* Styling for Sign up Page */
+  .password-signup{
+    color: var(--quaternary-color);
+  }
+
+  .username-signup{
+    color: var(--quaternary-color);
+  }
+
+  .log-in{
+    color: var(--quaternary-color);
+  }
+
+  .log-in:hover{
+    text-decoration: none;
+    color: #d41414;
   }
   
-  a:hover {
-    color: #3486eb;
-  } */
-  
+  /* Logged In Homepage */
+
+  .logout{
+    text-decoration: none;
+    color: var(--quaternary-color);
+    font-size: 25px;
+    background-color: var(--secondary-color);
+
+  }
+
+  .logout:hover{
+    text-decoration: none;
+    color: #d41414;
+    background-color: var(--secondary-color);
+  }
+
+  .dashboard{
+    text-decoration: none;
+    color: var(--quaternary-color);
+    font-size: 25px;
+  }
+
+  .dashboard:hover{
+    text-decoration: none;
+    color: #d41414;
+  }
+
   button {
     background-color: #225ca3;
     border: 0;
