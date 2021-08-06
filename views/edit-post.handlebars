@@ -5,8 +5,13 @@
   </h2>
   <form class="edit-post-form">
     <div>
-      Title: <input name="post-title" type="text" value="{{post.title}}" />
-      Content: <input name="post-content" type="text" value="{{post.post_content}}" />
+      <div class="input-group mb-3">
+        <span>Title:</span><input name="post-title" class="post-title" type="text" value="{{post.title}}" />
+      </div>
+      <div class="input-group mb-3">
+   <span>Content: </span> <input name="post-content" class="post-content" type="text" value="{{post.post_content}}" />
+      </div>
+      
     </div>
     <div>
        Created on {{format_date post.created_at}}
