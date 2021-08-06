@@ -181,6 +181,11 @@ h2{
   width: 100%;
 }
 
+/* Comment styling */
+
+.username-comment{
+  color: var(--quaternary-color)
+}
   button {
     background-color: #225ca3;
     border: 0;
@@ -299,14 +304,13 @@ h2{
     margin-bottom: 1%;
   }
   
-  .comment:nth-child(odd) {
-    background-color: #fff5eb;
+  .comment{
+    background-color: white;
   }
   
   .comment .meta {
     font-size: 90%;
     margin-bottom: .5%;
-    opacity: .6;
   }
   
   .new-post-form input {
