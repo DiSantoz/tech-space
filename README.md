@@ -4,7 +4,7 @@
 
 A tech themed blog website, that allows users to sign-up, or log in to their account and interact with other users via comments, as well as create their own posts! 
 
-Checkout [tech-space!]()
+Checkout [tech-space!](https://the-tech-space.herokuapp.com)
 
 ## Table of Contents 
 
